@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using NUnit.Framework;
 
 namespace Open_Lab_04._06
 {
@@ -6,7 +10,13 @@ namespace Open_Lab_04._06
     {
         public int[] NoOdds(int[] numbers)
         {
-            throw new NotImplementedException();
+            List<int> list = new List<int>();
+            foreach(var num in numbers)
+            {
+                if (num % 2 == 0)
+                    list.Add(num);
+            }
+            return list.ToArray();
         }
     }
 }
